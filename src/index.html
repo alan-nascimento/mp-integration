@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MP</title>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+  </head>
+  <body>
+    <div class="cho-container"></div>
+  </body>
+  <script>
+    const mp = new MercadoPago('TEST-e06664f9-d9e8-4eb1-9648-978abae52d90', {
+      locale: 'es-AR',
+    });
+
+    mp.checkout({
+      preference: {
+        id: '239656545-0b8a9703-2730-46b9-9ce9-c1a5382e3332',
+      },
+      render: {
+        container: '.cho-container',
+        label: 'Pagar',
+      },
+    });
+  </script>
+</html>
