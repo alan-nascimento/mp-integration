@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MP</title>
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
   </head>
   <body>
     <div class="cho-container"></div>
   </body>
+  <script src="https://beta-sdk.mercadopago.com/js/v2"></script>
+  <!-- <script src="https://sdk.mercadopago.com/js/v2"></script> -->
   <script>
+    // const mp = new MercadoPago('APP_USR-ef3269ec-8423-42fc-9f30-9ab3e37c3b4a', {
+    //   locale: 'pt-BR',
+    // });
+
     const mp = new MercadoPago('TEST-e06664f9-d9e8-4eb1-9648-978abae52d90', {
       locale: 'es-AR',
     });
 
     mp.checkout({
       preference: {
-        id: '239656545-0b8a9703-2730-46b9-9ce9-c1a5382e3332',
+        id: '239656545-e3b5fc8d-b2a7-4657-91f1-5c8109dc7b7f',
+        // id: '239656545-e3b5fc8d-b2a7-4657-91f1-5c8109dc7b7f',
       },
       render: {
         container: '.cho-container',
